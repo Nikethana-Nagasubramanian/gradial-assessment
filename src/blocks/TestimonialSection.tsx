@@ -10,7 +10,7 @@ type Props = {
       <div className="p-4 max-w-[600px] mx-auto flex-wrap">
         <div className="text-4xl font-bold text-center max-w-[600px] whitespace-normal break-words">{text}</div>
         {(customerName || company || position) && (
-          <div className="pt-4 text-center">
+          <div className="p-4 text-center">
             {customerName && <h4 className="font-semibold">{customerName}</h4>}
             {(company || position) && (
               <p className="text-sm text-gray-600">

@@ -3,6 +3,7 @@ import { Canvas } from "./components/Canvas";
 import { Inspector } from "./components/Inspector";
 import { LeftSidebar } from "./components/LeftSidebar";
 import { Preview } from "./components/Preview";
+import "./App.css";
 
 function Editor() {
   return (

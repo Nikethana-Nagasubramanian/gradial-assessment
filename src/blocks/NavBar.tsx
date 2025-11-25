@@ -10,7 +10,7 @@ export function NavBar({ logo, links = [] }: Props) {
     return (
         <div className="flex justify-between items-center">
             {logo && <img src={logo} alt="Logo" className="w-10 h-10" />}
-            <nav className="flex gap-4">
+            <nav className="flex gap-4 h-[48px] w-full items-center justify-end p-6">
                 {links.map((link, index) => (
                     <a 
                         key={index} 
