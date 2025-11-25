@@ -39,13 +39,21 @@ export function FeatureCardBlock({
         ];
 
   return (
-    <div className="w-full bg-white items-center justify-center">
-      <div className="px-6 py-8 mx-auto items-center justify-center" style={{ maxWidth: "1200px" }}>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div className="w-full bg-white">
+      <div className="px-6 py-8 mx-auto" style={{ maxWidth: "1200px" }}>
+        <div
+          className={`grid gap-6 justify-items-center ${
+            derivedFeatures.length === 1
+              ? "grid-cols-1"
+              : derivedFeatures.length === 2
+              ? "grid-cols-1 md:grid-cols-2"
+              : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          }`}
+        >
           {derivedFeatures.map((feature, index) => (
             <div
               key={`${feature.title}-${index}`}
-              className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col"
+              className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden flex flex-col w-full max-w-xs"
             >
               {feature.imageUrl && (
                 <img

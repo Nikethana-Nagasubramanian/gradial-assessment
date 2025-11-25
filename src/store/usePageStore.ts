@@ -29,7 +29,7 @@ const DEFAULT_GLOBAL_STYLES: GlobalStyles = {
   fontFamily: "'Inter', sans-serif",
 };
 
-// Load initial state from localStorage
+// Load initial state from localStorage - mimics auth flow
 const loadState = (): { page: Block[]; selectedId: string | null; globalStyles: GlobalStyles } => {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -47,7 +47,6 @@ const loadState = (): { page: Block[]; selectedId: string | null; globalStyles: 
   return { page: [], selectedId: null, globalStyles: DEFAULT_GLOBAL_STYLES };
 };
 
-// Save state to localStorage
 const saveState = (page: Block[], globalStyles: GlobalStyles) => {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({ page, globalStyles }));
