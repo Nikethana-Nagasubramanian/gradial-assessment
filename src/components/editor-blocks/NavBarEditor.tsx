@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { usePageStore } from "../../store/usePageStore";
 import { TextField } from "../reusable-components/TextField";
 import { ActionButton } from "../reusable-components/ActionButton";
-import { Trash, Plus } from "phosphor-react";
+import { Trash, Plus } from "@phosphor-icons/react";
 import { BLOCK_DEFINITIONS } from "../rendered-blocks/blockDefinitions";
 
 const DEFAULT_LINKS = [
@@ -63,7 +63,7 @@ export function NavBarEditor({ block }: { block: any }) {
         
         {links.map((link: { label: string; url: string }, index: number) => (
           <div key={index} className="space-y-4 rounded-lg">
-            <div className="text-xs font-medium text-gray-500 mb-2">
+            <div className="text-sm font-medium text-gray-500 mb-2">
               Link {index + 1}
             </div>
             
@@ -86,7 +86,8 @@ export function NavBarEditor({ block }: { block: any }) {
                   id={`link-${index}-section`}
                   value={link.url}
                   onChange={(e) => updateLink(index, "url", e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  style={{ fontSize: '14px' }}
                 >
                   <option value="">Select a section...</option>
                   {availableBlocks.map((b) => (
@@ -108,16 +109,17 @@ export function NavBarEditor({ block }: { block: any }) {
           </div>
         ))}
         
-        <button
+        <ActionButton
+          variant="secondary"
+          label="Add more nav items"
+          icon={<Plus size={16} />}
           onClick={addLink}
-          className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-        >
-          <Plus size={20} />
-          Add more nav items
-        </button>
+          showBorder={false}
+          className="w-full"
+        />
       </div>
       
-      <ActionButton variant="delete" block={block} label="Delete Navigation Bar" />
+      <ActionButton variant="delete" block={block} label="Delete Navigation Bar" className="w-full" />
     </div>
   );
 }

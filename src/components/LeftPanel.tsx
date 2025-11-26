@@ -4,7 +4,7 @@ import { ReorderBlocksPanel } from "./ReorderBlocksPanel";
 import { TabNavigation } from "./reusable-components/TabNavigation";
 import { ActionButton } from "./reusable-components/ActionButton";
 import { usePageStore } from "../store/usePageStore";
-import { Eye } from "phosphor-react";
+import { Eye } from "@phosphor-icons/react";
 
 const FONT_OPTIONS = [
   { label: "Inter", value: "'Inter', sans-serif" },
@@ -50,12 +50,22 @@ export function LeftPanel() {
       </div>
       <div className="flex-1 overflow-y-auto">
         {activeTab === "add" && (
-          <div id="add-block-panel" role="tabpanel" aria-labelledby="add-tab">
+          <div 
+            id="add-panel" 
+            role="tabpanel" 
+            aria-labelledby="add-tab"
+            aria-hidden="false"
+          >
             <AddBlocksPanel />
           </div>
         )}
         {activeTab === "reorder" && (
-          <div id="reorder-block-panel" role="tabpanel" aria-labelledby="reorder-tab">
+          <div 
+            id="reorder-panel" 
+            role="tabpanel" 
+            aria-labelledby="reorder-tab"
+            aria-hidden="false"
+          >
             <ReorderBlocksPanel />
           </div>
         )}
@@ -94,6 +104,7 @@ export function LeftPanel() {
           disabled={!canPreview}
           tooltip={!canPreview ? "Add at least 2 blocks to preview it." : undefined}
           showBorder={false}
+          className="w-full"
         />
       </div>
     </div>

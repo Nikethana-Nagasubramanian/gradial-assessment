@@ -36,7 +36,8 @@ export function LayoutTab({ block }: LayoutTabProps) {
         </label>
         <select
           id="hero-padding-input"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          style={{ fontSize: '14px' }}
           value={block.props.padding || "8"}
           onChange={(e) => updateBlock(block.id, { padding: e.target.value })}
         >
@@ -54,7 +55,8 @@ export function LayoutTab({ block }: LayoutTabProps) {
         </label>
         <select
           id="hero-spacing-input"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          style={{ fontSize: '14px' }}
           value={block.props.spacing || "4"}
           onChange={(e) => updateBlock(block.id, { spacing: e.target.value })}
         >
@@ -76,11 +78,12 @@ export function LayoutTab({ block }: LayoutTabProps) {
               key={option.value}
               type="button"
               onClick={() => updateBlock(block.id, { textAlign: option.value })}
-              className={`flex-1 px-4 py-2 rounded-lg border transition-all ${
+              className={`inline-flex flex-1 items-center justify-center whitespace-nowrap text-sm font-medium h-8 px-3 rounded-md border transition-[background-color,color,box-shadow] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                 (block.props.textAlign || "center") === option.value
                   ? "bg-blue-500 text-white border-blue-500"
                   : "bg-white text-gray-700 border-gray-300 hover:border-gray-400"
               }`}
+              style={{ fontSize: "14px" }}
               aria-label={`Align text ${option.label.toLowerCase()}`}
             >
               {option.label}
@@ -95,7 +98,8 @@ export function LayoutTab({ block }: LayoutTabProps) {
         </label>
         <select
           id="hero-height-input"
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          style={{ fontSize: '14px' }}
           value={block.props.sectionHeight || "tall"}
           onChange={(e) => updateBlock(block.id, { sectionHeight: e.target.value })}
         >

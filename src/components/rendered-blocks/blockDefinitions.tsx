@@ -8,8 +8,13 @@ import { NavBarEditor } from "../editor-blocks/NavBarEditor";
 import { FooterEditor } from "../editor-blocks/FooterEditor";
 import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
-import { Quotes, Cards, Star, Rectangle } from "phosphor-react";
+import { Quotes, Cards, Star, Rectangle } from "@phosphor-icons/react";
 import hero1 from "../../assets/background1.jpg";
+import brandImage from "../../assets/brand-image.jpg";
+import workflowImage from "../../assets/automation-image.jpg";
+import performanceImage from "../../assets/performance-image.jpg";
+
+
 
 export type BlockDefinition = {
   id: string;
@@ -68,21 +73,21 @@ export const BLOCK_DEFINITIONS: Record<string, BlockDefinition> = {
           title: "Brand Compliance & QA",
           description:
             "Enforce brand, SEO, and accessibility standards across every page, then automatically flag and fix issues so teams maintain consistent experiences.",
-          imageUrl: "https://via.placeholder.com/256x192",
+          imageUrl: brandImage,
           linkUrl: "#",
           linkText: "Learn more",
         },
         {
           title: "Workflow Automation",
           description: "Automate repetitive page updates with simple workflows that keep teams focused on high-impact work.",
-          imageUrl: "https://via.placeholder.com/256x192",
+          imageUrl: workflowImage,
           linkUrl: "#",
           linkText: "Read more",
         },
         {
           title: "Performance Insights",
           description: "Monitor conversion, accessibility, and SEO metrics for every page in real-time.",
-          imageUrl: "https://via.placeholder.com/256x192",
+          imageUrl: performanceImage,
           linkUrl: "#",
           linkText: "See insights",
         },
@@ -97,7 +102,7 @@ export const BLOCK_DEFINITIONS: Record<string, BlockDefinition> = {
     component: TestimonialSection,
     editor: TestimonialSectionEditor,
     defaultProps: {
-      text: "Gradial is a great tool and has saved us a lot of time and money.",
+      text: "Cursor is a great tool and has saved us a lot of time and money.",
       customerName: "Daniel O'Connell",
       company: "Alpha Systems",
       position: "VP of Engineering",

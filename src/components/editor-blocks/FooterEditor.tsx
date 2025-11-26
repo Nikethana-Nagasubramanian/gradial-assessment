@@ -15,7 +15,7 @@ export function FooterEditor({ block }: { block: any }) {
         placeholder="Enter footer text..."
         description="Enter the footer text content"
       />
-      <ActionButton variant="delete" block={block} label="Delete Footer" />
+      <ActionButton variant="delete" block={block} label="Delete Footer" className="w-full" />
     </div>
   );
 }

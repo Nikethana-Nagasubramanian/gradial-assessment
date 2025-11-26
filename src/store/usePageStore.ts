@@ -105,7 +105,7 @@ export const usePageStore = create<PageState>((set, get) => ({
     set((state) => {
       const newPage = state.page.map((block) => {
         if (block.id === id) {
-          // For features array, we need to replace it entirely, not merge
+          // For features array
           const updatedProps = { ...block.props };
           if (props.features) {
             updatedProps.features = props.features;
@@ -136,7 +136,6 @@ export const usePageStore = create<PageState>((set, get) => ({
       return { page: newPage, selectedId: null };
     });
     
-    // Save after state is updated
     saveState(newPage!, globalStyles!);
   },
 

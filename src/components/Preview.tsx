@@ -1,5 +1,5 @@
 import { usePageStore } from "../store/usePageStore";
-import { BLOCKS } from "./rendered-blocks/BlockRegistry";
+import { BLOCKS } from "./rendered-blocks/blockDefinitions";
 
 export function Preview() {
   const page = usePageStore((s) => s.page);

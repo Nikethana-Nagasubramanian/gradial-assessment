@@ -4,7 +4,7 @@ import { FileUploadField } from "../reusable-components/FileUploadField";
 import { TextField } from "../reusable-components/TextField";
 import { TextAreaField } from "../reusable-components/TextAreaField";
 import { ActionButton } from "../reusable-components/ActionButton";
-import { Plus, Trash } from "phosphor-react";
+import { Plus, Trash } from "@phosphor-icons/react";
 import { compressImage } from "../../utils/imageCompression";
 
 type FeatureItem = {
@@ -211,22 +211,18 @@ export function FeatureCardBlockEditor({ block }: { block: any }) {
           </div>
         ))}
 
-        <button
-          type="button"
+        <ActionButton
+          variant="secondary"
+          label="Add feature"
+          icon={<Plus size={18} />}
           onClick={addFeature}
           disabled={features.length >= 3}
-          className={`w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
-            features.length >= 3
-              ? "text-gray-400 border-gray-200 cursor-not-allowed"
-              : "text-blue-600 border-blue-200 hover:border-blue-400 hover:bg-blue-50"
-          }`}
-        >
-          <Plus size={18} />
-          Add feature
-        </button>
+          showBorder={false}
+          className="w-full"
+        />
       </div>
 
-      <ActionButton variant="delete" block={block} label="Delete Feature Card" />
+      <ActionButton variant="delete" block={block} label="Delete Feature Card" className="w-full" />
     </div>
   );
 }

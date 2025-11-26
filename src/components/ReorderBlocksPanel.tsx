@@ -7,8 +7,8 @@ import {
   useSortable 
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { BLOCKS } from "./rendered-blocks/BlockRegistry";
-import { DotsSixVertical } from "phosphor-react";
+import { BLOCKS } from "./rendered-blocks/blockDefinitions";
+import { DotsSixVertical } from "@phosphor-icons/react";
 
 type SortableBlockItemProps = {
   block: { id: string; type: string; props: any };

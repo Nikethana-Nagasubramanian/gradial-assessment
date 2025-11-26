@@ -28,7 +28,7 @@ export function HeroSectionBlockEditor({ block }: HeroSectionBlockEditorProps) {
       {activeTab === "styling" && <StylingTab block={block} />}
       {activeTab === "layout" && <LayoutTab block={block} />}
 
-      <ActionButton variant="delete" block={block} label="Delete Hero Section" />
+      <ActionButton variant="delete" block={block} label="Delete Hero Section" className="w-full" />
     </div>
   );
 }

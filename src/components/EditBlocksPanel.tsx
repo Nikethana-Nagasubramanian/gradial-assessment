@@ -1,6 +1,6 @@
 import { usePageStore } from "../store/usePageStore";
-import { Sparkle } from "phosphor-react";
-import { BLOCK_EDITOR_REGISTRY } from "./editor-blocks/BlockEditorRegistry";
+import { Sparkle } from "@phosphor-icons/react";
+import { BLOCK_EDITOR_REGISTRY } from "./rendered-blocks/blockDefinitions";
 
 export function EditBlocksPanel() {
   const { page, selectedId } = usePageStore();

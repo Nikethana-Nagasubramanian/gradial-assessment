@@ -39,7 +39,7 @@ export function TestimonialSectionEditor({ block }: { block: any }) {
           placeholder="Enter position..."
           description="Enter the customer's position or job title"
         />
-     <ActionButton variant="delete" block={block} label="Delete Testimonial" />
+     <ActionButton variant="delete" block={block} label="Delete Testimonial" className="w-full" />
     </div>
   );
 }
