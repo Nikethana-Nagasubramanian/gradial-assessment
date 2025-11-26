@@ -3,7 +3,7 @@ import { HeroSection } from "./HeroSection";
 import { TestimonialSection } from "./TestimonialSection";
 import { FeatureCardBlockEditor } from "../editor-blocks/FeatureCardBlockEditor";
 import { HeroSectionBlockEditor } from "../editor-blocks/hero-section/HeroSectionBlockEditor";
-import { TestimonialSectionEditor } from "../editor-blocks/TextBlockEditor";
+import { TestimonialSectionEditor } from "../editor-blocks/TestimonialSectionEditor";
 import { NavBarEditor } from "../editor-blocks/NavBarEditor";
 import { FooterEditor } from "../editor-blocks/FooterEditor";
 import { NavBar } from "./NavBar";
@@ -102,7 +102,7 @@ export const BLOCK_DEFINITIONS: Record<string, BlockDefinition> = {
     component: TestimonialSection,
     editor: TestimonialSectionEditor,
     defaultProps: {
-      text: "Cursor is a great tool and has saved us a lot of time and money.",
+      text: "Gradial is a great tool and has saved us a lot of time and money.",
       customerName: "Daniel O'Connell",
       company: "Alpha Systems",
       position: "VP of Engineering",

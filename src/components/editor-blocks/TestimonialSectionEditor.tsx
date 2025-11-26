@@ -43,3 +43,4 @@ export function TestimonialSectionEditor({ block }: { block: any }) {
     </div>
   );
 }
+
